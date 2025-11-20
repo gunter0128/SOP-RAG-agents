@@ -78,7 +78,7 @@ SOP 是所有製造現場的重要依據：
 
 ## 使用資料集：多版本 SOP（Markdown）
 
-### 本專案使用自建的多版本 SOP (版本號有所不同)：
+### 本專案使用自建的多版本 SOP (共11筆資料 版本號有所不同)：
 
 SOP-001_startup_vx.md
 SOP-001_startup_vx.md
