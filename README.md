@@ -26,34 +26,34 @@ SOP 是所有製造現場的重要依據：
 **讓主管看到我能把資料（SOP）→ 索引 → 模型 → 多代理 → UI 整成一套真正能用的企業 AI 系統。**
 
 ---
-專案快速總覽（Problem / Input / Output）
-要解決的問題（Problem）
+# 專案快速總覽（Problem / Input / Output）
+## 要解決的問題（Problem）
 
 現場工程師在查 SOP 時常遇到：
 
-文件太長、不易搜尋
+* 文件太長、不易搜尋
 
-不確定哪一份才是最新版本
+* 不確定哪一份才是最新版本
 
-急需步驟時必須手動翻找內容
+* 急需步驟時必須手動翻找內容
 
-造成操作不一致、時間浪費、甚至用到舊 SOP
+* 造成操作不一致、時間浪費、甚至用到舊 SOP
 
 本專案透過 RAG + 多代理，協助工程師用自然語言快速取得「最新版本 SOP」的正確流程。
 
-系統輸入（Input）
+# 系統輸入（Input）
 
-多版本 SOP Markdown 文件（data/sop_raw/）
+## 多版本 SOP Markdown 文件（data/sop_raw/）
 
-SOP_ID
+* SOP_ID
 
-VERSION
+* VERSION
 
-EFFECTIVE_DATE
+* EFFECTIVE_DATE
 
-TITLE
+* TITLE
 
-步驟內容（純文字）
+## 步驟內容（純文字）
 
 使用者自然語言問題
 例如：
@@ -76,9 +76,9 @@ TITLE
 - SOP-001 v2.0 機台開機流程
 - SOP-003 v2.0 安全檢查流程
 
-📂 使用資料集：多版本 SOP（Markdown）
+# 📂 使用資料集：多版本 SOP（Markdown）
 
-本專案使用自建的多版本 SOP：
+## 本專案使用自建的多版本 SOP：
 
 SOP-001_startup_v1.0.md
 SOP-001_startup_v2.0.md
@@ -87,7 +87,7 @@ SOP-003_safety_check_v2.0.md
 SOP-005_error_handling_v3.0.md
 
 
-每份 SOP 格式如下：
+## 每份 SOP 格式如下：
 
 SOP_ID: SOP-005
 VERSION: 3.0
