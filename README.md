@@ -45,13 +45,13 @@ SOP 是所有製造現場的重要依據：
 
 ### 多版本 SOP Markdown 文件（模擬自建資料集）
 
-* SOP_ID
+* `SOP_ID`
 
-* VERSION
+* `VERSION`
 
-* EFFECTIVE_DATE
+* `EFFECTIVE_DATE`
 
-* TITLE
+* `TITLE`
 
 ### 步驟內容（純文字）
 
