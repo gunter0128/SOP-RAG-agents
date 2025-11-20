@@ -93,9 +93,12 @@ SOP-005_abnormal_vx.md
 
 ### 每份 SOP 格式如下：
 
-SOP_ID: SOP-005 
+SOP_ID: SOP-005
+
 VERSION: 3.0 
+
 EFFECTIVE_DATE: 2025-01-01 
+
 TITLE: 異常處理流程 
 
 1. 停止設備運作並進行安全確認。 
