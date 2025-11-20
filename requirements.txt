@@ -1,0 +1,8 @@
+openai
+python-dotenv
+numpy
+tiktoken
+pydantic
+rich
+streamlit
+gradio

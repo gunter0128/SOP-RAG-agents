@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+
+# Data index
+data/index/
+
+# Streamlit cache
+.streamlit/
+
+# Misc
+*.zip
