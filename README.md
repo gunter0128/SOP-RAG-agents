@@ -26,8 +26,8 @@ SOP 是所有製造現場的重要依據：
 **讓主管看到我能把資料（SOP）→ 索引 → 模型 → 多代理 → UI 整成一套真正能用的企業 AI 系統。**
 
 ---
-# 專案快速總覽（Problem / Input / Output）
-## 要解決的問題（Problem）
+## 專案快速總覽（Problem / Input / Output）
+### 要解決的問題（Problem）
 
 現場工程師在查 SOP 時常遇到：
 
@@ -41,9 +41,9 @@ SOP 是所有製造現場的重要依據：
 
 本專案透過 RAG + 多代理，協助工程師用自然語言快速取得「最新版本 SOP」的正確流程。
 
-# 系統輸入（Input）
+## 系統輸入（Input）
 
-## 多版本 SOP Markdown 文件（模擬自建資料集）
+### 多版本 SOP Markdown 文件（模擬自建資料集）
 
 * SOP_ID
 
@@ -53,7 +53,7 @@ SOP 是所有製造現場的重要依據：
 
 * TITLE
 
-## 步驟內容（純文字）
+### 步驟內容（純文字）
 
 使用者自然語言問題
 例如：
@@ -64,7 +64,7 @@ SOP 是所有製造現場的重要依據：
 
 「關機流程有哪些步驟？」
 
-# 系統輸出（Output）
+## 系統輸出（Output）
 
 * 條列式、可直接執行的 SOP 步驟
 
@@ -76,18 +76,19 @@ SOP 是所有製造現場的重要依據：
 - SOP-001 v2.0 機台開機流程
 - SOP-003 v2.0 安全檢查流程
 
-# 📂 使用資料集：多版本 SOP（Markdown）
+## 使用資料集：多版本 SOP（Markdown）
 
-## 本專案使用自建的多版本 SOP：
+### 本專案使用自建的多版本 SOP (版本號有所不同)：
 
-SOP-001_startup_v1.0.md
-SOP-001_startup_v2.0.md
-SOP-002_shutdown_v1.0.md
-SOP-003_safety_check_v2.0.md
-SOP-005_error_handling_v3.0.md
+SOP-001_startup_vx.md
+SOP-001_startup_vx.md
+SOP-002_shutdown_vx.md
+SOP-003_safety_check_vx.md
+SOP-004_quality_check_vx.md
+SOP-005_abnormal_vx.md
 
 
-## 每份 SOP 格式如下：
+### 每份 SOP 格式如下：
 
 SOP_ID: SOP-005
 VERSION: 3.0
