@@ -26,8 +26,9 @@ SOP 是所有製造現場的重要依據：
 **讓主管看到我能把資料（SOP）→ 索引 → 模型 → 多代理 → UI 整成一套真正能用的企業 AI 系統。**
 
 ---
-## 專案快速總覽（Problem / Input / Output）
-### 要解決的問題（Problem）
+# **2. SOP RAG Agents 專案：快速總覽（Problem / Input / Output）**
+
+## 2.1 要解決的問題（Problem）
 
 現場工程師在查 SOP 時常遇到：
 
@@ -41,9 +42,9 @@ SOP 是所有製造現場的重要依據：
 
 本專案透過 RAG + 多代理，協助工程師用自然語言快速取得「最新版本 SOP」的正確流程。
 
-## 系統輸入（Input）
+## 2.2 系統輸入（Input）
 
-### 多版本 SOP Markdown 文件（模擬自建資料集）
+### 2.2.1 多版本 SOP Markdown 文件（模擬自建資料集）
 
 * `SOP_ID`
 
@@ -53,7 +54,7 @@ SOP 是所有製造現場的重要依據：
 
 * `TITLE`
 
-### 步驟內容（純文字）
+### 2.2.2 步驟內容（純文字）
 
 使用者自然語言問題
 例如：
@@ -64,7 +65,7 @@ SOP 是所有製造現場的重要依據：
 
 「關機流程有哪些步驟？」
 
-## 系統輸出（Output）
+## 2.2.3 系統輸出（Output）
 
 * 條列式、可直接執行的 SOP 步驟
 
@@ -77,13 +78,13 @@ SOP 是所有製造現場的重要依據：
 - SOP-003 v2.0 安全檢查流程
 ---
 
-# 2. 系統架構概觀
+# 3. 系統架構概觀
 
 整體分成四層：
 
 ---
 
-## 2.1 文件處理層（Document Prep）
+## 3.1 文件處理層（Document Prep）
 
 來源資料：
 `data/sop_raw/*.md`（多版本）
@@ -96,7 +97,7 @@ SOP 是所有製造現場的重要依據：
 
 ---
 
-## 2.2 Indexing 層（Embedding Search Index）
+## 3.2 Indexing 層（Embedding Search Index）
 
 使用模型：
 
@@ -114,7 +115,7 @@ text-embedding-3-small
 
 ---
 
-## 2.3 AI Agents 層（RAG Multi-Agents）
+## 3.3 AI Agents 層（RAG Multi-Agents）
 
 本專案使用 **三個 Agents**：
 
@@ -151,7 +152,7 @@ SOP 常有版本：
 
 ---
 
-## 2.4 Streamlit DEMO 層（UI）
+## 3.4 Streamlit DEMO 層（UI）
 
 功能：
 
@@ -164,7 +165,7 @@ SOP 常有版本：
 
 ---
 
-# 3. 使用資料集：多版本 SOP 資料集（自行建立）
+# 4. 使用資料集：多版本 SOP 資料集（自行建立）
 
 本專案使用自行建立的 SOP ：
 
@@ -194,7 +195,7 @@ data/sop_raw/
 
 ---
 
-# 4. 專案目錄結構
+# 5. 專案目錄結構
 
 ```
 sop-rag-agents/
@@ -222,9 +223,9 @@ sop-rag-agents/
 
 ---
 
-# 5. 如何重現專案
+# 6. 如何重現專案
 
-## 5.1 建立環境
+## 6.1 建立環境
 
 ```bash
 git clone https://github.com/<your-account>/sop-rag-agents.git
@@ -239,7 +240,7 @@ $env:OPENAI_API_KEY="你的API_KEY"
 
 ---
 
-## 5.2 建立 SOP 索引
+## 6.2 建立 SOP 索引
 
 ```bash
 python -m src.rag.index_builder
@@ -254,7 +255,7 @@ data/index/metadata.json
 
 ---
 
-## 5.3 執行 Streamlit Demo（重點）
+## 6.3 執行 Streamlit Demo（重點）
 
 ```bash
 streamlit run src/app/dashboard.py
@@ -269,9 +270,9 @@ streamlit run src/app/dashboard.py
 
 ---
 
-# 6. RAG 與版本管理的可解釋性設計
+# 7. RAG 與版本管理的可解釋性設計
 
-## 6.1 語意檢索（Retriever）
+## 7.1 語意檢索（Retriever）
 
 使用 cosine similarity 做排序
 embedding 來源：`text-embedding-3-small`
@@ -286,7 +287,7 @@ embedding 來源：`text-embedding-3-small`
 
 ---
 
-## 6.2 版本管理（Version Agent）
+## 7.2 版本管理（Version Agent）
 
 比對方式：
 
@@ -298,7 +299,7 @@ embedding 來源：`text-embedding-3-small`
 
 ---
 
-## 6.3 LLM 回答設計
+## 7.3 LLM 回答設計
 
 LLM 嚴格根據 SOP：
 
@@ -309,7 +310,7 @@ LLM 嚴格根據 SOP：
 
 ---
 
-# 7. 企業價值（Business Impact）
+# 8. 企業價值（Business Impact）
 
 ### **① SOP 查詢自動化**
 
